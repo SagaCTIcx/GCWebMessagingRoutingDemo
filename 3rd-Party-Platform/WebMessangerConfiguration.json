@@ -1,0 +1,146 @@
+{
+  "id": "d4fa8d4a-2ac3-4ac1-9615-a230ba1be3a5",
+  "name": "Messaging",
+  "version": "6",
+  "headlessMode": {
+    "enabled": false
+  },
+  "description": "Use simple for development and testing",
+  "languages": [
+    "en-us"
+  ],
+  "defaultLanguage": "en-us",
+  "customI18nLabels": [
+    {
+      "language": "en-us",
+      "localizedLabels": [
+        {
+          "key": "MessengerHomeHeaderTitle",
+          "value": "Welcome"
+        },
+        {
+          "key": "MessengerHomeHeaderSubTitle",
+          "value": "We're here to help"
+        },
+        {
+          "key": "PushNotificationTitle",
+          "value": "You have a new message."
+        },
+        {
+          "key": "PushNotificationBody",
+          "value": "You have one or more unread messages."
+        }
+      ]
+    }
+  ],
+  "messenger": {
+    "enabled": true,
+    "styles": {
+      "primaryColor": "#1686b7"
+    },
+    "launcherButton": {
+      "visibility": "On"
+    },
+    "fileUpload": {
+      "enableAttachments": true,
+      "modes": [
+        {
+          "fileTypes": [
+            "image/jpeg",
+            "image/gif",
+            "image/png"
+          ],
+          "maxFileSizeKB": 10240
+        }
+      ]
+    },
+    "apps": {
+      "conversations": {
+        "enabled": true,
+        "showAgentTypingIndicator": true,
+        "showUserTypingIndicator": true,
+        "autoStart": {
+          "enabled": true
+        },
+        "markdown": {
+          "enabled": true
+        },
+        "conversationDisconnect": {
+          "enabled": false,
+          "type": "Send"
+        },
+        "conversationClear": {
+          "enabled": true
+        },
+        "humanize": {
+          "enabled": true,
+          "bot": {
+            "name": "Patrik",
+            "avatarUrl": "https://api-cdn.mypurecloud.ie/uploads/v1/publicassets/images/34306812-6fef-4b14-8774-9388ff4affff/b8b86632-6ad8-4262-8c48-e421b746a71d.PatrikUkucavaEkserUGlavu.jpg"
+          }
+        },
+        "notifications": {
+          "enabled": false,
+          "notificationContentType": "ExcludeMessagesContent"
+        }
+      },
+      "knowledge": {
+        "enabled": false,
+        "knowledgeBase": {
+          "id": ""
+        }
+      }
+    },
+    "homeScreen": {
+      "enabled": false,
+      "logoUrl": ""
+    },
+    "sessionPersistenceType": "AcrossSubdomains"
+  },
+  "position": {
+    "alignment": "Right",
+    "sideSpace": 20,
+    "bottomSpace": 12
+  },
+  "cobrowse": {
+    "enabled": false,
+    "allowAgentControl": true,
+    "allowAgentNavigation": true,
+    "allowDraw": true,
+    "maskSelectors": [],
+    "channels": [],
+    "readonlySelectors": [],
+    "pauseCriteria": []
+  },
+  "journeyEvents": {
+    "enabled": true,
+    "trackingSettings": {
+      "excludedQueryParameters": [],
+      "shouldKeepUrlFragment": true,
+      "searchQueryParameters": [],
+      "ipFilters": []
+    }
+  },
+  "authenticationSettings": {
+    "enabled": false,
+    "integrationId": "",
+    "allowSessionUpgrade": false
+  },
+  "dateCreated": "2022-05-25T12:36:35.667Z",
+  "dateModified": "2026-02-13T14:00:14.784Z",
+  "datePublished": "2026-02-13T14:00:39.113Z",
+  "lastModifiedUser": {
+    "id": "fd15591f-b002-4c8e-af26-d6b60c65b4b1",
+    "selfUri": "/api/v2/users/fd15591f-b002-4c8e-af26-d6b60c65b4b1"
+  },
+  "createdUser": {
+    "id": "577c3eaf-5c8a-43c1-b080-47b807e59620",
+    "selfUri": "/api/v2/users/577c3eaf-5c8a-43c1-b080-47b807e59620"
+  },
+  "publishedUser": {
+    "id": "fd15591f-b002-4c8e-af26-d6b60c65b4b1",
+    "selfUri": "/api/v2/users/fd15591f-b002-4c8e-af26-d6b60c65b4b1"
+  },
+  "status": "Active",
+  "selfUri": "/api/v2/webdeployments/configurations/d4fa8d4a-2ac3-4ac1-9615-a230ba1be3a5/versions/6"
+}

@@ -1,0 +1,32 @@
+{
+  "id": "4100f16a-3c61-44f9-b9d2-6aeeff8d3603",
+  "name": "Test",
+  "description": "Just send message and route to Demo queue",
+  "allowAllDomains": true,
+  "allowedDomains": [],
+  "supportedContent": {
+    "id": "webmessagingdefault",
+    "selfUri": "/api/v2/conversations/messaging/supportedcontent/webmessagingdefault"
+  },
+  "snippet": "<script type=\"text/javascript\" charset=\"utf-8\">  (function (g, e, n, es, ys) {    g['_genesysJs'] = e;    g[e] = g[e] || function () {      (g[e].q = g[e].q || []).push(arguments)    };    g[e].t = 1 * new Date();    g[e].c = es;    ys = document.createElement('script'); ys.async = 1; ys.src = n; ys.charset = 'utf-8'; document.head.appendChild(ys);  })(window, 'Genesys', 'https://apps.mypurecloud.ie/genesys-bootstrap/genesys.min.js', {    environment: 'euw1',    deploymentId: '4100f16a-3c61-44f9-b9d2-6aeeff8d3603'  });</script>",
+  "dateCreated": "2022-05-25T12:41:00.621Z",
+  "dateModified": "2026-02-13T14:00:55.491Z",
+  "lastModifiedUser": {
+    "id": "fd15591f-b002-4c8e-af26-d6b60c65b4b1",
+    "selfUri": "/api/v2/users/fd15591f-b002-4c8e-af26-d6b60c65b4b1"
+  },
+  "flow": {
+    "id": "f3658a10-a47c-4c98-87f9-73d76c993ac3",
+    "name": "Message Routing of 3rd party object",
+    "selfUri": "/api/v2/flows/f3658a10-a47c-4c98-87f9-73d76c993ac3"
+  },
+  "status": "Active",
+  "pushIntegrations": [],
+  "configuration": {
+    "id": "d4fa8d4a-2ac3-4ac1-9615-a230ba1be3a5",
+    "name": "Messaging",
+    "selfUri": "/api/v2/webdeployments/configurations/d4fa8d4a-2ac3-4ac1-9615-a230ba1be3a5/versions/6",
+    "version": "6"
+  },
+  "selfUri": "/api/v2/webdeployments/deployments/4100f16a-3c61-44f9-b9d2-6aeeff8d3603"
+}
