@@ -1,0 +1,75 @@
+{
+  "id": "704d48b3-4474-4dc7-b882-f9bb4b7a0e6d",
+  "name": "With Cobrowse",
+  "description": "",
+  "allowAllDomains": true,
+  "allowedDomains": [],
+  "supportedContent": {
+    "id": "9a18e554-f775-45fe-9920-9923fa5f9682",
+    "selfUri": "/api/v2/conversations/messaging/supportedcontent/9a18e554-f775-45fe-9920-9923fa5f9682"
+  },
+  "snippet": "<script type=\"text/javascript\" charset=\"utf-8\">  (function (g, e, n, es, ys) {    g['_genesysJs'] = e;    g[e] = g[e] || function () {      (g[e].q = g[e].q || []).push(arguments)    };    g[e].t = 1 * new Date();    g[e].c = es;    ys = document.createElement('script'); ys.async = 1; ys.src = n; ys.charset = 'utf-8'; document.head.appendChild(ys);  })(window, 'Genesys', 'https://apps.mypurecloud.ie/genesys-bootstrap/genesys.min.js', {    environment: 'prod-euw1',    deploymentId: '704d48b3-4474-4dc7-b882-f9bb4b7a0e6d'  });</script>",
+  "dateCreated": "2025-09-10T13:20:51.047Z",
+  "dateModified": "2026-03-25T13:40:17.347Z",
+  "lastModifiedUser": {
+    "id": "fd15591f-b002-4c8e-af26-d6b60c65b4b1",
+    "selfUri": "/api/v2/users/fd15591f-b002-4c8e-af26-d6b60c65b4b1"
+  },
+  "flow": {
+    "id": "66e7b360-6bdb-4845-bff9-06505820fe7c",
+    "name": "Simple messaging demo flow",
+    "selfUri": "/api/v2/flows/66e7b360-6bdb-4845-bff9-06505820fe7c",
+    "flowDescription": "Very simple flow just to send automatic reply that it will be routed to an agent",
+    "publishVersion": {
+      "id": "6.0",
+      "name": "6.0",
+      "commitVersion": "6.0",
+      "configurationVersion": "2.0",
+      "secure": false,
+      "debug": false,
+      "createdBy": {
+        "id": "fd15591f-b002-4c8e-af26-d6b60c65b4b1",
+        "name": "Раско Радојевић",
+        "selfUri": "/api/v2/users/fd15591f-b002-4c8e-af26-d6b60c65b4b1"
+      },
+      "configurationUri": "/api/v2/flows/66e7b360-6bdb-4845-bff9-06505820fe7c/versions/6.0/configuration",
+      "dateCreated": 1726217676652,
+      "dateCheckedIn": 1726217676657,
+      "dateSaved": 1726217674923,
+      "generationId": "WORKFLOW_VERSION_PUBLISHED",
+      "inputSchema": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "title": "Flow input schema",
+        "description": "Schema defining flow input parameters.  Property names map to flow scoped variables marked as a flow input.  If you do not supply a property value for an input variable, the variable value will be set to the initial value configured on it in the flow at flow startup.",
+        "type": "object",
+        "properties": {},
+        "additionalProperties": false
+      },
+      "outputSchema": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "title": "Flow output schema",
+        "description": "Schema defining flow output parameters.  Property names map to flow scoped variables marked as a flow output.",
+        "type": "object",
+        "properties": {},
+        "additionalProperties": false
+      },
+      "datePublished": "2024-09-13T08:54:36.927Z",
+      "supportedLanguages": [
+        {
+          "language": "en-us",
+          "isDefault": true
+        }
+      ],
+      "selfUri": "/api/v2/flows/66e7b360-6bdb-4845-bff9-06505820fe7c/versions/6.0"
+    }
+  },
+  "status": "Active",
+  "pushIntegrations": [],
+  "configuration": {
+    "id": "54802590-4d4c-4406-8ff2-0aa1069148c2",
+    "name": "With Cobrowse",
+    "selfUri": "/api/v2/webdeployments/configurations/54802590-4d4c-4406-8ff2-0aa1069148c2/versions/4",
+    "version": "4"
+  },
+  "selfUri": "/api/v2/webdeployments/deployments/704d48b3-4474-4dc7-b882-f9bb4b7a0e6d"
+}

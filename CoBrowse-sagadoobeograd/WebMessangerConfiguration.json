@@ -1,0 +1,209 @@
+{
+  "id": "54802590-4d4c-4406-8ff2-0aa1069148c2",
+  "name": "With Cobrowse",
+  "version": "4",
+  "headlessMode": {
+    "enabled": false
+  },
+  "description": "With Cobrowse",
+  "languages": [
+    "en-us",
+    "nl",
+    "hu",
+    "ro"
+  ],
+  "defaultLanguage": "en-us",
+  "customI18nLabels": [
+    {
+      "language": "en-us",
+      "localizedLabels": [
+        {
+          "key": "MessengerHomeHeaderTitle",
+          "value": "Zdravo živo"
+        },
+        {
+          "key": "MessengerHomeHeaderSubTitle",
+          "value": "Ovo sam mogao da promenim"
+        },
+        {
+          "key": "PushNotificationTitle",
+          "value": "You have a new message."
+        },
+        {
+          "key": "PushNotificationBody",
+          "value": "You have one or more unread messages."
+        }
+      ]
+    },
+    {
+      "language": "hu",
+      "localizedLabels": [
+        {
+          "key": "MessengerHomeHeaderTitle",
+          "value": "Üdvözöljük"
+        },
+        {
+          "key": "MessengerHomeHeaderSubTitle",
+          "value": "Szívesen segítünk"
+        },
+        {
+          "key": "PushNotificationTitle",
+          "value": "Új üzenetet kapott."
+        },
+        {
+          "key": "PushNotificationBody",
+          "value": "Egy vagy több olvasatlan üzenete van."
+        }
+      ]
+    },
+    {
+      "language": "nl",
+      "localizedLabels": [
+        {
+          "key": "MessengerHomeHeaderTitle",
+          "value": "Welkom"
+        },
+        {
+          "key": "MessengerHomeHeaderSubTitle",
+          "value": "Wij helpen u graag"
+        },
+        {
+          "key": "PushNotificationTitle",
+          "value": "U hebt een nieuw bericht."
+        },
+        {
+          "key": "PushNotificationBody",
+          "value": "U hebt een of meer ongelezen berichten."
+        }
+      ]
+    },
+    {
+      "language": "ro",
+      "localizedLabels": [
+        {
+          "key": "MessengerHomeHeaderTitle",
+          "value": "Bun venit"
+        },
+        {
+          "key": "MessengerHomeHeaderSubTitle",
+          "value": "Suntem aici să vă ajutăm"
+        },
+        {
+          "key": "PushNotificationTitle",
+          "value": "Aveți un mesaj nou."
+        },
+        {
+          "key": "PushNotificationBody",
+          "value": "Aveți unul sau mai multe mesaje necitite."
+        }
+      ]
+    }
+  ],
+  "messenger": {
+    "enabled": true,
+    "styles": {
+      "primaryColor": "#E20808"
+    },
+    "launcherButton": {
+      "visibility": "On"
+    },
+    "fileUpload": {
+      "enableAttachments": true,
+      "modes": [
+        {
+          "fileTypes": [
+            "image/jpeg",
+            "image/gif",
+            "image/png"
+          ],
+          "maxFileSizeKB": 10240
+        }
+      ]
+    },
+    "apps": {
+      "conversations": {
+        "enabled": true,
+        "showAgentTypingIndicator": true,
+        "showUserTypingIndicator": true,
+        "autoStart": {
+          "enabled": false
+        },
+        "markdown": {
+          "enabled": true
+        },
+        "conversationDisconnect": {
+          "enabled": true,
+          "type": "ReadOnly"
+        },
+        "conversationClear": {
+          "enabled": true
+        },
+        "humanize": {
+          "enabled": true,
+          "bot": {
+            "name": "Darling",
+            "avatarUrl": "https://api-cdn.mypurecloud.ie/uploads/v1/publicassets/images/34306812-6fef-4b14-8774-9388ff4affff/f27ab7ca-c4a1-4910-9ba6-d8251bd236f6.DarlingCross-removebg-preview.png"
+          }
+        },
+        "notifications": {
+          "enabled": false,
+          "notificationContentType": "ExcludeMessagesContent"
+        }
+      },
+      "knowledge": {
+        "enabled": false,
+        "knowledgeBase": {
+          "id": ""
+        }
+      }
+    },
+    "homeScreen": {
+      "enabled": true,
+      "logoUrl": ""
+    },
+    "sessionPersistenceType": "AcrossSubdomains"
+  },
+  "position": {
+    "alignment": "Auto",
+    "sideSpace": 20,
+    "bottomSpace": 12
+  },
+  "cobrowse": {
+    "enabled": true,
+    "allowAgentControl": true,
+    "allowAgentNavigation": true,
+    "allowDraw": true,
+    "maskSelectors": [],
+    "channels": [
+      "Webmessaging",
+      "Voice"
+    ],
+    "readonlySelectors": [],
+    "pauseCriteria": []
+  },
+  "journeyEvents": {
+    "enabled": false
+  },
+  "authenticationSettings": {
+    "enabled": false,
+    "integrationId": "",
+    "allowSessionUpgrade": false
+  },
+  "dateCreated": "2025-09-10T13:13:23.754Z",
+  "dateModified": "2026-03-25T13:39:44.528Z",
+  "datePublished": "2026-03-25T13:39:50.049Z",
+  "lastModifiedUser": {
+    "id": "fd15591f-b002-4c8e-af26-d6b60c65b4b1",
+    "selfUri": "/api/v2/users/fd15591f-b002-4c8e-af26-d6b60c65b4b1"
+  },
+  "createdUser": {
+    "id": "fd15591f-b002-4c8e-af26-d6b60c65b4b1",
+    "selfUri": "/api/v2/users/fd15591f-b002-4c8e-af26-d6b60c65b4b1"
+  },
+  "publishedUser": {
+    "id": "fd15591f-b002-4c8e-af26-d6b60c65b4b1",
+    "selfUri": "/api/v2/users/fd15591f-b002-4c8e-af26-d6b60c65b4b1"
+  },
+  "status": "Active",
+  "selfUri": "/api/v2/webdeployments/configurations/54802590-4d4c-4406-8ff2-0aa1069148c2/versions/4"
+}
