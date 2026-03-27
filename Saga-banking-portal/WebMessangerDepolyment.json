@@ -1,0 +1,75 @@
+{
+  "id": "04617f53-857a-4efc-bef1-8787556b1222",
+  "name": "Web poruke na srpskom",
+  "description": "Tok za obradu poruka",
+  "allowAllDomains": true,
+  "allowedDomains": [],
+  "supportedContent": {
+    "id": "webmessagingdefault",
+    "selfUri": "/api/v2/conversations/messaging/supportedcontent/webmessagingdefault"
+  },
+  "snippet": "<script type=\"text/javascript\" charset=\"utf-8\">  (function (g, e, n, es, ys) {    g['_genesysJs'] = e;    g[e] = g[e] || function () {      (g[e].q = g[e].q || []).push(arguments)    };    g[e].t = 1 * new Date();    g[e].c = es;    ys = document.createElement('script'); ys.async = 1; ys.src = n; ys.charset = 'utf-8'; document.head.appendChild(ys);  })(window, 'Genesys', 'https://apps.mypurecloud.ie/genesys-bootstrap/genesys.min.js', {    environment: 'prod-euw1',    deploymentId: '04617f53-857a-4efc-bef1-8787556b1222'  });</script>",
+  "dateCreated": "2023-08-11T10:54:04.018Z",
+  "dateModified": "2026-02-27T09:14:42.036Z",
+  "lastModifiedUser": {
+    "id": "fd15591f-b002-4c8e-af26-d6b60c65b4b1",
+    "selfUri": "/api/v2/users/fd15591f-b002-4c8e-af26-d6b60c65b4b1"
+  },
+  "flow": {
+    "id": "059bda4e-7629-4f64-99f4-48507a8a0048",
+    "name": "Web messaging demo srpski",
+    "selfUri": "/api/v2/flows/059bda4e-7629-4f64-99f4-48507a8a0048",
+    "flowDescription": "Obrada web messaging poruka na srpskom",
+    "publishVersion": {
+      "id": "4.0",
+      "name": "4.0",
+      "commitVersion": "4.0",
+      "configurationVersion": "2.0",
+      "secure": false,
+      "debug": false,
+      "createdBy": {
+        "id": "fd15591f-b002-4c8e-af26-d6b60c65b4b1",
+        "name": "Раско Радојевић",
+        "selfUri": "/api/v2/users/fd15591f-b002-4c8e-af26-d6b60c65b4b1"
+      },
+      "configurationUri": "/api/v2/flows/059bda4e-7629-4f64-99f4-48507a8a0048/versions/4.0/configuration",
+      "dateCreated": 1772185470584,
+      "dateCheckedIn": 1772185470591,
+      "dateSaved": 1772185467211,
+      "generationId": "WORKFLOW_VERSION_PUBLISHED",
+      "inputSchema": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "title": "Flow input schema",
+        "description": "Schema defining flow input parameters.  Property names map to flow scoped variables marked as a flow input.  If you do not supply a property value for an input variable, the variable value will be set to the initial value configured on it in the flow at flow startup.",
+        "type": "object",
+        "properties": {},
+        "additionalProperties": false
+      },
+      "outputSchema": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "title": "Flow output schema",
+        "description": "Schema defining flow output parameters.  Property names map to flow scoped variables marked as a flow output.",
+        "type": "object",
+        "properties": {},
+        "additionalProperties": false
+      },
+      "datePublished": "2026-02-27T09:44:31.009Z",
+      "supportedLanguages": [
+        {
+          "language": "en-us",
+          "isDefault": true
+        }
+      ],
+      "selfUri": "/api/v2/flows/059bda4e-7629-4f64-99f4-48507a8a0048/versions/4.0"
+    }
+  },
+  "status": "Active",
+  "pushIntegrations": [],
+  "configuration": {
+    "id": "5c50cf77-fa9c-430f-a43d-de4bb7dfc842",
+    "name": "Web Messaging Widget srpski",
+    "selfUri": "/api/v2/webdeployments/configurations/5c50cf77-fa9c-430f-a43d-de4bb7dfc842/versions/6",
+    "version": "6"
+  },
+  "selfUri": "/api/v2/webdeployments/deployments/04617f53-857a-4efc-bef1-8787556b1222"
+}

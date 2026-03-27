@@ -1,0 +1,146 @@
+{
+  "id": "5c50cf77-fa9c-430f-a43d-de4bb7dfc842",
+  "name": "Web Messaging Widget srpski",
+  "version": "6",
+  "headlessMode": {
+    "enabled": false
+  },
+  "description": "Web Messaging Widget za demo sa flow: \"Tok za obradu poruka\"",
+  "languages": [
+    "en-us"
+  ],
+  "defaultLanguage": "en-us",
+  "customI18nLabels": [
+    {
+      "language": "en-us",
+      "localizedLabels": [
+        {
+          "key": "MessengerHomeHeaderTitle",
+          "value": "Dobro došli u naš svet"
+        },
+        {
+          "key": "MessengerHomeHeaderSubTitle",
+          "value": "Web messaging demo"
+        },
+        {
+          "key": "PushNotificationTitle",
+          "value": "You have a new message."
+        },
+        {
+          "key": "PushNotificationBody",
+          "value": "You have one or more unread messages."
+        }
+      ]
+    }
+  ],
+  "messenger": {
+    "enabled": true,
+    "styles": {
+      "primaryColor": "#01a8f2"
+    },
+    "launcherButton": {
+      "visibility": "On"
+    },
+    "fileUpload": {
+      "enableAttachments": true,
+      "modes": [
+        {
+          "fileTypes": [
+            "image/jpeg",
+            "image/gif",
+            "image/png"
+          ],
+          "maxFileSizeKB": 10240
+        }
+      ]
+    },
+    "apps": {
+      "conversations": {
+        "enabled": true,
+        "showAgentTypingIndicator": true,
+        "showUserTypingIndicator": true,
+        "autoStart": {
+          "enabled": true
+        },
+        "markdown": {
+          "enabled": true
+        },
+        "conversationDisconnect": {
+          "enabled": false,
+          "type": "Send"
+        },
+        "conversationClear": {
+          "enabled": true
+        },
+        "humanize": {
+          "enabled": true,
+          "bot": {
+            "name": "CTI",
+            "avatarUrl": "https://api-cdn.mypurecloud.ie/uploads/v1/publicassets/images/34306812-6fef-4b14-8774-9388ff4affff/181e3e2c-e69a-44b0-8473-b84193ce0a28.CTIlogoS64l.png"
+          }
+        },
+        "notifications": {
+          "enabled": true,
+          "notificationContentType": "ExcludeMessagesContent"
+        }
+      },
+      "knowledge": {
+        "enabled": false,
+        "knowledgeBase": {
+          "id": ""
+        }
+      }
+    },
+    "homeScreen": {
+      "enabled": true,
+      "logoUrl": "https://api-cdn.mypurecloud.ie/uploads/v1/publicassets/images/34306812-6fef-4b14-8774-9388ff4affff/bd89b75e-c913-41bc-ac37-5adafcb8283e.CTISharePointLogo_Superman.jpg"
+    },
+    "sessionPersistenceType": "AcrossSubdomains"
+  },
+  "position": {
+    "alignment": "Auto",
+    "sideSpace": 20,
+    "bottomSpace": 12
+  },
+  "cobrowse": {
+    "enabled": false,
+    "allowAgentControl": true,
+    "allowAgentNavigation": true,
+    "allowDraw": true,
+    "maskSelectors": [],
+    "channels": [],
+    "readonlySelectors": [],
+    "pauseCriteria": []
+  },
+  "journeyEvents": {
+    "enabled": true,
+    "trackingSettings": {
+      "excludedQueryParameters": [],
+      "shouldKeepUrlFragment": false,
+      "searchQueryParameters": [],
+      "ipFilters": []
+    }
+  },
+  "authenticationSettings": {
+    "enabled": false,
+    "integrationId": "",
+    "allowSessionUpgrade": false
+  },
+  "dateCreated": "2023-08-11T10:52:28.116Z",
+  "dateModified": "2026-02-27T09:14:14.031Z",
+  "datePublished": "2026-02-27T09:14:18.155Z",
+  "lastModifiedUser": {
+    "id": "fd15591f-b002-4c8e-af26-d6b60c65b4b1",
+    "selfUri": "/api/v2/users/fd15591f-b002-4c8e-af26-d6b60c65b4b1"
+  },
+  "createdUser": {
+    "id": "fd15591f-b002-4c8e-af26-d6b60c65b4b1",
+    "selfUri": "/api/v2/users/fd15591f-b002-4c8e-af26-d6b60c65b4b1"
+  },
+  "publishedUser": {
+    "id": "fd15591f-b002-4c8e-af26-d6b60c65b4b1",
+    "selfUri": "/api/v2/users/fd15591f-b002-4c8e-af26-d6b60c65b4b1"
+  },
+  "status": "Active",
+  "selfUri": "/api/v2/webdeployments/configurations/5c50cf77-fa9c-430f-a43d-de4bb7dfc842/versions/6"
+}
