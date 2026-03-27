@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Web Messaging – Initiate & Clear</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 40px; }
+    input, button { padding: 10px; font-size: 16px; }
+    button { background: #16a87a; color: #fff; border: 0; border-radius: 5px; margin-left: 10px; cursor: pointer; }
+    button:hover { background: #0056b3; }
+    #log { margin-top: 18px; font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 13px; white-space: pre-wrap; }
+  </style>
+</head>
+<body>
+  <input type="text" id="videoCallIdInput" placeholder="VideoCallid" />
+  <button onclick="initiate()">Initiate</button>
+  <button onclick="sendClear()">Clear conversation</button>
+
+  <div id="log"></div>
+
+  <script>
+    let ws = null;
+    const session = {
+      deploymentId: "4100f16a-3c61-44f9-b9d2-6aeeff8d3603",
+      token: null,
+      tracingId: null
+    };
+
+    function log(...args) {
+      console.log(...args);
+      const el = document.getElementById("log");
+      el.textContent += args.map(a => (typeof a === "string" ? a : JSON.stringify(a))).join(" ") + "\n";
+    }
+
+    function generateUUID() {
+      return ([1e7]+-1e3+-4e3+-8e3+-1e11).replace(/[018]/g, c =>
+        (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16)
+      );
+    }
+
+    function initiate() {
+      const videoCallId = document.getElementById("videoCallIdInput").value.trim();
+      if (!videoCallId) { alert("Please enter a VideoCallid"); return; }
+
+      // Use the same token & tracingId throughout the session
+      session.token = generateUUID();
+      session.tracingId = generateUUID();
+
+      ws = new WebSocket(`wss://webmessaging.mypurecloud.ie/v1?deploymentId=${session.deploymentId}`);
+
+      ws.onopen = () => {
+        log("WebSocket connected");
+
+        // 1) configureSession (token in payload)
+        ws.send(JSON.stringify({
+          action: "configureSession",
+          deploymentId: session.deploymentId,
+          token: session.token
+        }));
+        log("Sent configureSession", { token: session.token });
+
+        // 2) First message with custom attributes (after a short delay)
+        setTimeout(() => {
+          ws.send(JSON.stringify({
+            token: session.token,
+            tracingId: session.tracingId,
+            action: "onMessage",
+              message: {
+              type: "Event",
+              events: [
+               {
+                 eventType: "Presence",
+                 presence: {
+                 type: "Join"
+                           }
+     }
+     ],
+              //type: "Text",
+             // text: videoCallid,
+              channel: {
+                metadata: {
+                  customAttributes: {
+                    VideoCallid: videoCallId,
+                    odeljenje: "Kontakt Centar",
+                    kanal: "Moša video poziv",
+                    device: "VSCode Live Server"
+                  }
+                }
+              }
+            }
+          }));
+          log("Sent onMessage with VideoCallid:", videoCallId);
+        }, 800);
+      };
+
+      ws.onmessage = (evt) => log("Received:", evt.data);
+      ws.onerror = (err) => log("WebSocket error:", err?.message || err);
+      ws.onclose = () => log("WebSocket closed");
+    }
+
+    // Send the End-user Clear Conversation event using the SAME token & tracingId
+    function sendClear() {
+      if (!ws || ws.readyState !== WebSocket.OPEN) { log("No open WebSocket to send Clear."); return; }
+      if (!session.token || !session.tracingId) { log("Missing session token/tracingId."); return; }
+
+      const payload = {
+        action: "onMessage",
+        message: {
+          type: "Event",
+          events: [
+            {
+              eventType: "Presence",
+              presence: { type: "Clear" }
+            }
+          ]
+        },
+        tracingId: session.tracingId,
+        token: session.token
+      };
+
+      ws.send(JSON.stringify(payload));
+      log("Sent Presence/Clear event");
+
+      // Optional: close WS shortly after
+      setTimeout(() => {
+        try { ws.close(); } catch (_) {}
+      }, 400);
+    }
+  </script>
+</body>
+</html>

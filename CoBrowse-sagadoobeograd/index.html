@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mockup – Co-browse demo</title>
+  <style>
+    :root {
+      --green: #2e9d50;
+      --green-hover: #258544;
+      --red: #d22636;
+      --red-hover: #b51e2d;
+      --blue: #0d6efd;
+    }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #fff;
+      color: #111;
+    }
+    .wrap {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 28px 20px 60px;
+    }
+    h1 {
+      font-size: 16px;
+      font-weight: 600;
+      margin: 6px 0 28px;
+    }
+    .toolbar {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
+    button {
+      border: none;
+      border-radius: 8px;
+      padding: 10px 22px;
+      font-size: 16px;
+      font-weight: 600;
+      color: #fff;
+      cursor: pointer;
+    }
+    .btn-show { background: var(--green); }
+    .btn-show:hover { background: var(--green-hover); }
+    .btn-hide { background: var(--red); }
+    .btn-hide:hover { background: var(--red-hover); }
+
+    /* Toggle switch */
+    .switch {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      width: 100px;
+      height: 40px;
+    }
+    .switch input { display: none; }
+    .track {
+      position: absolute;
+      inset: 0;
+      background: #fff;
+      border: 2px solid #111;
+      border-radius: 999px;
+    }
+    .thumb {
+      position: absolute;
+      top: 4px; left: 4px;
+      width: 44px;
+      height: 28px;
+      background: var(--blue);
+      border-radius: 999px;
+      display: grid;
+      place-items: center;
+      color: #fff;
+      font-weight: 700;
+      transition: left .18s ease;
+    }
+    .switch input:checked + .track + .thumb { left: 50px; }
+
+    .output {
+      margin-top: 40px;
+    }
+    .form-fields {
+      margin-top: 20px;
+      display: none;
+    }
+    .form-fields input {
+      display: block;
+      margin-bottom: 12px;
+      padding: 8px;
+      font-size: 14px;
+      width: 100%;
+      max-width: 300px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+    .form-fields label {
+      font-size: 14px;
+      margin-bottom: 4px;
+      display: block;
+    }
+      .output { margin: 0 0 16px; font-size: 15px; color: #222; }
+    .muted { color: #6b7280; }
+
+    .hidden { display: none; }
+    .card {
+      border: 1px solid #e5e7eb;
+      border-radius: 12px;
+      padding: 18px;
+      background: var(--bg);
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 14px;
+    }
+    .grid .col-span { grid-column: 1 / -1; }
+    label span { display: block; font-size: 13px; color: #374151; margin-bottom: 6px; }
+    input, select, textarea {
+      width: 100%;
+      border: 1px solid #cfd5dd;
+      border-radius: 8px;
+      padding: 10px 12px;
+      font-size: 15px;
+      background: #fff;
+      outline: none;
+    }
+    input:focus, select:focus, textarea:focus { border-color: #9bb7ff; box-shadow: 0 0 0 3px rgba(13,110,253,.18); }
+    .actions { display: flex; align-items: center; gap: 12px; margin-top: 10px; }
+    .hint { font-size: 13px; color: #6b7280; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Dobro došli na moša prezentaciju deljenja sadržaja stranice preko Co-browse funkcionalnosti na Genesys Cloud</h1>
+
+    <div class="toolbar" role="group" aria-label="Kontrole">
+      <button class="btn-show" id="btnShow" type="button">Show</button>
+      <button class="btn-hide" id="btnHide" type="button">Hide</button>
+
+      <label class="switch" aria-label="On/Off prekidač">
+        <input type="checkbox" id="toggleDemo" checked />
+        <span class="track" aria-hidden="true"></span>
+        <span class="thumb" aria-hidden="true">ON</span>
+        <span class="label-on" aria-hidden="true"><span>ON</span><span></span></span>
+        <span class="label-off" aria-hidden="true"><span></span><span>OFF</span></span>
+      </label>
+    </div>
+
+    <!-- Sekcija za poruku i demo-formu -->
+    <div id="demoArea" class="demo hidden">
+      <div id="output" class="output">Button clicked action invoked</div>
+
+      <form id="demoForm" class="card" autocomplete="off">
+        <div class="grid">
+          <label>
+            <span>Ime i prezime</span>
+            <input type="text" placeholder="Unesite ime i prezime" />
+          </label>
+          <label>
+            <span>Registrovani e‑mail</span>
+            <input type="email" placeholder="ime.prezime@primer.com" />
+          </label>
+          <label>
+            <span>Proizvod</span>
+            <select>
+              <option value="">— izaberite —</option>
+              <option>Zlato (Au)</option>
+              <option>Srebro (Ag)</option>
+              <option>Hartije od vrednosti</option>
+            </select>
+          </label>
+          <label class="col-span">
+            <span>Dodatna napomena</span>
+            <textarea rows="4" placeholder="Unesite napomenu i detalje…"></textarea>
+          </label>
+        </div>
+        <div class="actions">
+          <button type="submit" class="btn-show">Zahtev (demo)</button>
+          <span class="hint">Ovo je demo: Kada se klikne na zahtev, ali ništa nije poslato još.</span>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    // Pomoćne klase i selektori
+    const area = document.getElementById('demoArea');
+    const out = document.getElementById('output');
+    const btnShow = document.getElementById('btnShow');
+    const btnHide = document.getElementById('btnHide');
+    const form = document.getElementById('demoForm');
+
+    // Pokaži: prikaže poruku + formu
+    btnShow.addEventListener('click', () => {
+      out.textContent = 'Button clicked action invoked';
+      area.classList.remove('hidden');
+    });
+
+    // Sakrij: očisti i sakrije sve što je prikazano Show-om
+    btnHide.addEventListener('click', () => {
+      out.textContent = '';
+      area.classList.add('hidden');
+      form.reset();
+    });
+
+    // Demo submit – samo sprečava reload i prikaže kratku potvrdu
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      out.textContent = 'Demo submit uspešan – ništa nije poslato.';
+    });
+
+    // Početno stanje: sakriveno (klasa hidden je već dodata u HTML-u)
+	
+	// Deo koji se odnosi na Genesys Web Messaging widget
+	(function (g, e, n, es, ys) {
+    g['_genesysJs'] = e;
+    g[e] = g[e] || function () {
+      (g[e].q = g[e].q || []).push(arguments)
+    };
+    g[e].t = 1 * new Date();
+    g[e].c = es;
+    ys = document.createElement('script'); ys.async = 1; ys.src = n; ys.charset = 'utf-8'; document.head.appendChild(ys);
+  })(window, 'Genesys', 'https://apps.mypurecloud.ie/genesys-bootstrap/genesys.min.js', {
+    environment: 'prod-euw1',
+    deploymentId: '704d48b3-4474-4dc7-b882-f9bb4b7a0e6d'
+  });
+  // Web deployment na sagadooobeograd organizaciji
+  </script>
+</body>
+</html>

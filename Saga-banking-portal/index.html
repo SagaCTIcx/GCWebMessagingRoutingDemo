@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Saga tim za kontakt centar rešenja – Finansijska vertikala</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Roboto, sans-serif;
+      margin: 0;
+      background-color: #f4f6f9;
+      color: #1f2937;
+      opacity: 0;
+      animation: fadeIn 1.2s ease-out forwards;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    header, section, .card, footer {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: slideUp 1s ease-out forwards;
+    }
+
+    header { animation-delay: .2s; }
+    section { animation-delay: .4s; }
+    .card:nth-child(1) { animation-delay: .6s; }
+    .card:nth-child(2) { animation-delay: .8s; }
+    .card:nth-child(3) { animation-delay: 1.0s; }
+    footer { animation-delay: 1.2s; }
+
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    header {
+      background: url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+      color: white;
+      text-align: center;
+      padding: 100px 20px;
+    }
+
+    header h1 {
+      font-size: 46px;
+      margin: 0 0 10px;
+      text-shadow: 0 2px 5px rgba(0,0,0,0.4);
+    }
+
+    header p {
+      font-size: 20px;
+      margin: 0;
+      text-shadow: 0 2px 5px rgba(0,0,0,0.4);
+    }
+
+    section {
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      overflow: hidden;
+      transition: transform .3s ease, box-shadow .3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+    }
+
+    .card img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+    }
+
+    .card h3 {
+      margin: 15px;
+      font-size: 20px;
+      color: #0f172a;
+    }
+
+    .card p {
+      margin: 0 15px 20px 15px;
+      font-size: 14px;
+      color: #4b5563;
+    }
+
+    footer {
+      background: #0f172a;
+      color: #cbd5e1;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    footer a { color: #22c55e; text-decoration: none; }
+
+    @media (max-width: 600px) {
+      header h1 { font-size: 30px; }
+      header p { font-size: 16px; }
+      section { padding: 25px 15px; }
+      .card img { height: 130px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Saga tim za finansijska kontakt centar rešenja</h1>
+    <p>Sigurna i moderna komunikacija za banke i finansijske institucije</p>
+  </header>
+
+  <section>
+    <h2>Digitalno bankarstvo u oblaku</h2>
+    <p>Unapredite korisničko iskustvo u finansijskom sektoru uz Genesys Cloud platformu. Omogućite sigurnu, pouzdanu i skalabilnu komunikaciju sa klijentima – bilo da je reč o kreditima, investicijama, štednji ili digitalnom bankarstvu. Naša rešenja kombinuju regulatornu usklađenost, bezbednost podataka i vrhunsko korisničko iskustvo.</p>
+
+    <div class="features">
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=800&q=60" alt="Digital Banking">
+        <h3>Digitalno bankarstvo</h3>
+        <p>Podržite klijente kroz onboarding, odobravanje kredita i svakodnevne bankarske upite putem omnichannel komunikacije – poziv, chat, email i video identifikacija.</p>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1640340434855-6084b1f4901c?auto=format&fit=crop&w=800&q=60" alt="Crypto Services">
+        <h3>Crypto & Digitalna imovina</h3>
+        <p>Omogućite podršku za crypto transakcije, digitalne novčanike i blockchain servise uz sigurnu autentifikaciju i praćenje interakcija u realnom vremenu.</p>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1553729459-efe14ef6055d?auto=format&fit=crop&w=800&q=60" alt="Investment Services">
+        <h3>Investicije i upravljanje portfoliom</h3>
+        <p>Unapredite komunikaciju sa klijentima u vezi sa investicionim fondovima, berzanskim transakcijama i savetovanjem – uz punu analitiku i personalizaciju.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <section>
+    <h2>Razgovarajte sa finansijskim savetnikom</h2>
+    <p>Pokrenite razgovor sa našim timom kako biste saznali kako Genesys Cloud može unaprediti vašu bankarsku ili finansijsku organizaciju. Naš tim je spreman da demonstrira bezbedne, regulatorno usklađene i skalabilne modele komunikacije.</p>
+  </section>
+
+  <footer>
+    <p>© 2026 Saga tim za kontakt centar rešenja – Finansijska vertikala. Demo verzija za prezentaciju. | <a href="#">Politika privatnosti</a></p>
+  </footer>
+
+  <!-- Genesys Cloud Web Messaging Script -->
+  <script type="text/javascript" charset="utf-8">
+    (function (g, e, n, es, ys) {
+      g['_genesysJs'] = e;
+      g[e] = g[e] || function () {
+        (g[e].q = g[e].q || []).push(arguments)
+      };
+      g[e].t = 1 * new Date();
+      g[e].c = es;
+      ys = document.createElement('script'); ys.async = 1; ys.src = n; ys.charset = 'utf-8'; document.head.appendChild(ys);
+    })(window, 'Genesys', 'https://apps.mypurecloud.ie/genesys-bootstrap/genesys.min.js', {
+      environment: 'prod-euw1',
+      deploymentId: '04617f53-857a-4efc-bef1-8787556b1222'
+    });
+
+    Genesys("command", "Database.set", {
+      messaging: {
+        customAttributes: {
+          odeljenje: "Finansije",
+          kanal: "Banking Demo",
+          device: "VSCode Live Server"
+        }
+      }
+    });
+  </script>
+</body>
+</html>
